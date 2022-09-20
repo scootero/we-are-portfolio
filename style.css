@@ -67,9 +67,6 @@ body {
   position: relative;
   /* background-color: black; */
   width: 100%;
-
-  /* right: -70px; */
-  /* float: right; */
 }
 
 .hero-container {
@@ -98,18 +95,19 @@ body {
 .slogan-txt {
   margin: auto;
   position: relative;
-  height: auto;
+  height: 20%;
   /* width: 20%; */
   /* background-color: blue; */
   margin-left: 200px;
-  top: -200px;
+  /* top: -400px; */
+  margin-top: 20px;
 }
 
 .slogan-txt div {
   color: white;
   position: relative;
   /* margin: 20px; */
-  font-size: 200px;
+  font-size: 15vw;
   /* line-height: 120px; */
   letter-spacing: 0.3rem;
   line-height: 0.8;
@@ -118,7 +116,7 @@ body {
 }
 
 .slogan-txt .are {
-  left: 300px;
+  left: 200px;
 }
 
 .slogan-txt div:hover {
@@ -220,3 +218,6 @@ body {
 }
 
 /* END Model */
+
+@media screen and (max 900px) {
+}
