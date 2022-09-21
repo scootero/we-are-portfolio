@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-
+  width: 100%;
   /* height: auto; */
   font-family: "Antonio", sans-serif;
   background-color: whitesmoke;
@@ -59,17 +59,16 @@ body {
 .portfolio-img {
   position: absolute;
   z-index: 1;
-width: 100%;
- display: flex;
- justify-content: right;
- margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  margin-top: 100px;
 }
 
 .portfolio-img img {
   position: relative;
   width: 100%;
   max-width: 1700px;
-  
 }
 
 .slogan-container {
@@ -80,7 +79,7 @@ width: 100%;
 }
 .hero-wrapper {
   width: 95%;
- 
+
   height: 800px;
   max-height: 50vw;
   background-color: purple;
@@ -130,15 +129,15 @@ width: 100%;
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 900px;
-  margin-top: 55%;
+  height: 100%;
+  margin-top: 65vw;
 }
 
 .phone-full {
   width: 40%;
   max-width: 400px;
   position: absolute;
-  margin-top: 55%;
+  margin-top: 60vw;
   margin-left: 60px;
   z-index: 1;
 }
@@ -154,10 +153,9 @@ width: 100%;
   justify-content: right;
 }
 
-
 .what-wrapper {
   color: white;
-  position: absolute;
+  position: relative;
   /* z-index: 1; */
   font-size: 4vw;
   /* margin: auto; */
@@ -185,61 +183,76 @@ width: 100%;
 /* MODEL */
 
 .model-txt-wrapper {
-  margin-top: 90px;
+  margin-top: 70px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
 }
 
 .model-container {
   /* background-color: orange; */
-  width: 95%;
+  width: 95vw;
   height: 800px;
   margin: auto;
   border-radius: 70px;
   /* position: relative; */
   display: flex;
-  align-items: left;
+  /* align-items: left; */
   /* top: 0px; */
 
   justify-content: center;
 }
 .object-wrapper {
-  width: 1000px;
-  height: 1000px;
-
-  border-radius: 0 50px 0 50px;
-  display: flex;
+  width: 90%;
+  height: 500px;
 }
 .model {
-  width: 98%;
-  height: 96%;
-  /* margin: 30px; */
-  margin: auto;
-  border-radius: 500px;
-  border: 20px solid purple;
+  width: 100%;
+  height: 100%;
+  border-radius: 300px;
+  border: 15px solid purple;
   box-sizing: border-box;
 }
 
 /* END Model */
 
-@media screen and (max-width: 900px) {
-  body {
-    background-color: aqua;
-  }
+/* FOOTER  */
 
+footer {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(
+    180deg,
+    rgb(237, 237, 237) 0%,
+    rgb(83, 83, 83) 100%
+  );
+}
+footer li {
+  list-style: none;
+  color: black;
+}
+
+footer .container {
+  max-width: 1200px;
+}
+
+/* END FOOTER */
+
+@media screen and (max-width: 900px) {
   .nav-section {
     margin-top: 15px;
   }
   .nav-wrapper a:hover {
-    transition:none;
+    transition: none;
     letter-spacing: normal;
-  } 
+  }
 
   .nav-wrapper a {
     margin: auto;
-    font-size: 8vw;
-  
-    transition:none;
+    font-size: vw;
+
+    transition: none;
     letter-spacing: normal;
     color: black;
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
@@ -248,16 +261,15 @@ width: 100%;
   .hero-wrapper {
     border-radius: 30px;
   }
-  
+
   .portfolio-img {
-   margin-top:6vh
+    margin-top: 6vh;
   }
 
   .slogan-txt {
     margin-left: 20vw;
   }
 
-  
   .slogan-txt div {
     transition: none;
     letter-spacing: normal;
@@ -267,19 +279,20 @@ width: 100%;
     transition: none;
     letter-spacing: normal;
   }
- 
+
   .slogan-txt .are {
     left: 80px;
   }
 
-  
-.what-container {
-  border-radius: 30px;
-height:35%;
-/* min-height: 250px; */
-}
+  .what-container {
+    border-radius: 30px;
+    height: 55vw;
+    /* background-color: red; */
+    /* margin-top: 300px; */
+    /* min-height: 250px; */
+  }
 
-  .what-wrapper{
+  .what-wrapper {
     font-size: 26px;
   }
   .what-txt span {
@@ -287,26 +300,24 @@ height:35%;
     margin: 30px;
   }
   .what-txt span:hover {
-    transition:none;
+    transition: none;
     letter-spacing: normal;
   }
 
-  .phone-full  {
+  .phone-full {
     max-width: 200px;
 
     top: 70px;
     margin-left: 20px;
   }
-
-
 }
 
-
-
-@media screen and (max-width: 500px){
-  
-
-  .what-wrapper{
+@media screen and (max-width: 500px) {
+  .nav-wrapper a::selection {
+    transition: 1s;
+    letter-spacing: 2px;
+  }
+  .what-wrapper {
     font-size: 18px;
   }
   .what-txt span {
@@ -318,14 +329,17 @@ height:35%;
     left: 60px;
   }
 
-  
   .what-txt span:hover {
     transition: none;
     letter-spacing: normal;
   }
 
-  .phone-full  {
+  .phone-full {
     top: 90px;
     margin-left: 5px;
   }
-} 
+  .object-wrapper {
+    width: 350px;
+    height: 350px;
+  }
+}
