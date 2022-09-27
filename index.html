@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> -->
     <!-- <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script> -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -41,21 +43,21 @@
     </div>
 
 
-    <img class="phone-full" src="./imgs/phone/phone-full.png" alt="">
+    <img class="phone-full" id="phone-full" src="./imgs/phone/phone-full.png" alt="">
     <section class="section">
         <div class="what-container">
             <div class="what-wrapper">
                 <div class="what-txt">
-                    <span>
+                    <span class="reveal-spread-x">
                         We portfolio it all
                     </span>
-                    <span>
+                    <span class="reveal-spread-x">
                         Track it all
                     </span>
-                    <span>
+                    <span class="reveal-spread-x">
                         From stocks to real estate
                     </span>
-                    <span>
+                    <span class="reveal-spread-x">
                         The complete portfolio
                     </span>
                 </div>
@@ -63,15 +65,16 @@
 
         </div>
         <div class="model-txt-wrapper">
-            <div class="model-txt">
-                <h4>Data with life</h4>
+            <div class="model-txt reveal-y">
+                <h4>Bring your data to life</h4>
+                <div class="line" id="line"></div>
             </div>
         </div>
-        <div class="model-container">
+        <div class="model-container" id="model-container">
             <div class="object-wrapper">
-                <model-viewer class="model" src="./imgs/phone/phone.glb" ar ar-scale="fixed" camera-controls
+                <model-viewer class="model" id="model" src="./imgs/phone/phone.glb" ar-scale=" fixed" camera-controls
                     skybox-image="./imgs/city.jpg" xr-environment disable-zoom touch-action="pan-y"
-                    poster="./imgs/phone/poster.webp" auto-rotate shadow-intensity="0">
+                    poster="./imgs/phone/poster.webp" shadow-intensity="0">
                 </model-viewer>
             </div>
         </div>
@@ -81,19 +84,48 @@
 
 
 
-    <footer>
-        ...footer in pro
-        <div class="footer-container">
+    <footer class="footer">
+
+        <div id="footer" class="footer-container">
+
             <div class="footer-row">
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4>Products</h4>
                     <ul>
-                        <li><a href="#">Portfolio Manifesto</a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
+                        <li><a href="#">Invest</a></li>
+                        <li><a href="#">Real Estate</a></li>
+                        <li><a href="#">Bank</a></li>
+                        <li><a href="#">Advisors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Team</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col find-us">
+                    <h4>Find Us</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
             </div>
+
         </div>
     </footer>
 

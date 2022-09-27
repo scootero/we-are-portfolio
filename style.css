@@ -7,9 +7,11 @@
 body {
   margin: 0;
   width: 100%;
+  height: 100%;
   /* height: auto; */
   font-family: "Antonio", sans-serif;
   background-color: whitesmoke;
+  /* overflow: hidden; */
 }
 
 .nav-section {
@@ -85,8 +87,10 @@ body {
   background-color: purple;
   border-radius: 70px;
   display: flex;
+  border: 4px orange solid;
   justify-content: center;
   position: absolute;
+  box-sizing: border-box;
 }
 .slogan-wrapper {
   width: 100%;
@@ -129,20 +133,30 @@ body {
   position: relative;
   z-index: 0;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   margin-top: 65vw;
 }
 
 .phone-full {
-  width: 40%;
+  width: 25%;
   max-width: 400px;
   position: absolute;
-  margin-top: 60vw;
-  margin-left: 60px;
+  top: 64vw;
+  margin-left: 100px;
   z-index: 1;
+  transform: translateX(-500px);
+  opacity: 0;
+}
+
+.loaded {
+  transform: translateX(0px);
+  transition: 3s;
+  opacity: 1;
 }
 .what-container {
   background-color: orange;
+  border: 4px purple solid;
+  box-sizing: border-box;
   width: 95%;
   height: 70%;
   margin: auto;
@@ -154,28 +168,29 @@ body {
 }
 
 .what-wrapper {
-  color: white;
   position: relative;
-  /* z-index: 1; */
   font-size: 4vw;
-  /* margin: auto; */
-  /* align-items: center; */
-  /* display: flex; */
   text-align: right;
   justify-content: right;
-  /* right: 200px; */
+  color: white;
 }
 
 .what-txt span {
   display: block;
   margin: 50px;
-  transition: 0.8s ease-out;
+  /* transition: 0.8s ease-out; */
   position: relative;
   z-index: 2;
+  pointer-events: none;
 }
-.what-txt span:hover {
-  transition: 0.8s ease-out;
-  letter-spacing: 10px;
+
+.reveal-spread-x {
+  letter-spacing: 2px;
+  transition: 1s;
+}
+.reveal-spread-x.active {
+  letter-spacing: 8px;
+  transition: 1s;
 }
 
 /* END what  */
@@ -183,65 +198,181 @@ body {
 /* MODEL */
 
 .model-txt-wrapper {
-  margin-top: 70px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 0px;
   display: flex;
   justify-content: center;
+}
+.model-txt {
+  font-size: 4em;
+  justify-content: center;
+}
+.line {
+  position: relative;
+  bottom: 25%;
+  width: 100%;
+  height: 7px;
+  background-color: purple;
+  /* position: s; */
+  margin: auto;
+  /* top: 80%; */
+  transform-style: preserve-3d;
+  transform: rotateY(-89deg);
+  transition: 2s;
+}
+
+.line.show {
+  transition: 2.5s ease-in;
+
+  transform: rotateY(0deg);
+}
+
+.reveal-y {
+  transform: translateY(180px);
+  transition: 2s;
+  opacity: 0;
+}
+
+.reveal-y.active {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 2s;
 }
 
 .model-container {
-  /* background-color: orange; */
-  width: 95vw;
-  height: 800px;
-  margin: auto;
+  width: 100vw;
+  /* height: 1000px; */
+  /* margin: auto; */
   border-radius: 70px;
-  /* position: relative; */
   display: flex;
-  /* align-items: left; */
-  /* top: 0px; */
-
   justify-content: center;
 }
+
 .object-wrapper {
   width: 90%;
-  height: 500px;
+  height: 700px;
 }
+
 .model {
   width: 100%;
   height: 100%;
   border-radius: 300px;
   border: 15px solid purple;
   box-sizing: border-box;
+  /* width: 50px; */
+  transform-style: preserve-3d;
+  transform: rotateY(-89deg) rotateZ(4deg);
+  transition: 2s;
 }
 
+.model.show {
+  transition: 2.5s ease-in;
+  /* transform: scaleX(1); */
+  transform: rotateZ(0deg) rotateY(0deg);
+}
 /* END Model */
 
 /* FOOTER  */
 
 footer {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
   position: absolute;
   width: 100%;
-  height: 300px;
+  height: 540px;
+  margin-top: 20%;
+
   background: linear-gradient(
     180deg,
-    rgb(237, 237, 237) 0%,
-    rgb(83, 83, 83) 100%
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 12%,
+    orange 20%,
+
+    purple 100%
   );
+  overflow: hidden;
+}
+.footer-row {
+  width: 80%;
+
+  /* background-color: white; */
+  display: flex;
+  margin-top: 120px;
+  padding: 30px;
+  position: relative;
+left: 140px;
+  justify-content: space-between;
+}
+.footer-col {
+  /* margin: auto; */
+  /* margin-left: 10vw; */
+  /* margin-right:150px; */
+  margin-top: 0;
+}
+.footer-container {
+  position: relative;
+  /* transform: translateY(520px); */
+}
+.footer-container.show {
+  transition: 2s;
+  transform: translateY(0px);
+}
+footer ul {
+  list-style: none;
+
+  /* padding: 20px; */
+  position: absolute;
+  /* margin: 5px; */
 }
 footer li {
-  list-style: none;
-  color: black;
+  position: relative;
+  padding-bottom: 13px;
+  margin-left: 0;
+  left: -30px;
+}
+footer li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: 0.8s;
+}
+footer li a:hover {
+  transition: 0.8s;
+  letter-spacing: 2px;
+  padding-left: 12px;
 }
 
-footer .container {
-  max-width: 1200px;
+footer h4 {
+  text-transform: uppercase;
+  margin: 10px;
+  user-select: none;
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Courier New", Courier, monospace;
 }
 
+.find-us  ul li{
+  position: relative;
+margin-left: 25px;
+
+
+}
+i {
+  font-size: 2vw;
+  color: orange;
+  transition: .8s;
+  left: 50%;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.247);
+}
+
+i:hover {
+  color: purple;
+  transition: .8s;
+}
 /* END FOOTER */
 
 @media screen and (max-width: 900px) {
   .nav-section {
-    margin-top: 15px;
+    margin-top: 20px;
   }
   .nav-wrapper a:hover {
     transition: none;
@@ -250,7 +381,7 @@ footer .container {
 
   .nav-wrapper a {
     margin: auto;
-    font-size: vw;
+    font-size: 1.5em;
 
     transition: none;
     letter-spacing: normal;
@@ -263,7 +394,21 @@ footer .container {
   }
 
   .portfolio-img {
-    margin-top: 6vh;
+    margin-top: 10vh;
+  }
+
+  .section {
+    margin-top: 95vw;
+  }
+
+  .phone-full {
+    width: 32%;
+    max-width: 400px;
+    position: absolute;
+    margin-top: 70vw;
+    margin-left: 400px;
+    z-index: 1;
+    opacity: 0;
   }
 
   .slogan-txt {
@@ -292,9 +437,6 @@ footer .container {
     /* min-height: 250px; */
   }
 
-  .what-wrapper {
-    font-size: 26px;
-  }
   .what-txt span {
     transition: none;
     margin: 30px;
@@ -306,40 +448,95 @@ footer .container {
 
   .phone-full {
     max-width: 200px;
-
     top: 70px;
     margin-left: 20px;
   }
+  .model {
+    width: 100%;
+    height: 100%;
+    border-radius: 70px;
+    border: 5px solid purple;
+    box-sizing: border-box;
+  }
+  .reveal-spread-x {
+    letter-spacing: 5px;
+    font-size: 20px;
+    /* text-shadow: 4px 3px 3px rgba(0, 0, 0, 0.3); */
+  }
+  .reveal-spread-x.active {
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    transition: 2s;
+  }
+
+  .model-txt {
+    font-size: 2em;
+    justify-content: center;
+  }
+  .phone-full {
+    transform: translateX(-180px);
+  }
+  .loaded {
+    transition: 2s;
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  footer {
+    height: 800px;
+  }
+  .footer-row {
+    display: block;
+    margin-top: 180px;
+    left: 0;
+  }
+  .footer-col {
+    margin: auto;
+  }
+  footer ul {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+  footer li {
+    padding-bottom: 8px;
+  }
+  .find-us ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    margin-top: 20px;
+    left:50px;
+  }
+  .find-us ul li {
+    margin: auto;
+  }
+  i {
+    font-size:3em;
+    left: 0;
+  }
 }
 
-@media screen and (max-width: 500px) {
-  .nav-wrapper a::selection {
-    transition: 1s;
-    letter-spacing: 2px;
-  }
-  .what-wrapper {
-    font-size: 18px;
-  }
-  .what-txt span {
-    transition: none;
-    margin: 30px;
-  }
+  /* my IPHONE 12:  428px */
+  @media screen and (max-width: 500px) {
+    .what-wrapper {
+      font-size: 22px;
+      line-height: 1em;
+    }
+    .what-txt span {
+      transition: none;
+      margin: 30px;
+    }
 
-  .slogan-txt .are {
-    left: 60px;
-  }
+    .slogan-txt .are {
+      left: 60px;
+    }
 
-  .what-txt span:hover {
-    transition: none;
-    letter-spacing: normal;
-  }
-
-  .phone-full {
-    top: 90px;
-    margin-left: 5px;
-  }
-  .object-wrapper {
-    width: 350px;
-    height: 350px;
+    .object-wrapper {
+      width: 350px;
+      height: 350px;
+    }
   }
 }
