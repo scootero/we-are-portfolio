@@ -141,7 +141,7 @@ body {
   width: 25%;
   max-width: 400px;
   position: absolute;
-  top: 64vw;
+  top: 66vw;
   margin-left: 100px;
   z-index: 1;
   transform: translateX(-500px);
@@ -280,7 +280,7 @@ footer {
   position: absolute;
   width: 100%;
   height: 540px;
-  margin-top: 20%;
+  margin-top: 14%;
 
   background: linear-gradient(
     180deg,
@@ -311,10 +311,10 @@ left: 140px;
 }
 .footer-container {
   position: relative;
-  /* transform: translateY(520px); */
+  transform: translateY(320px);
 }
 .footer-container.show {
-  transition: 2s;
+  transition: 1.2s;
   transform: translateY(0px);
 }
 footer ul {
@@ -370,7 +370,7 @@ i:hover {
 }
 /* END FOOTER */
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .nav-section {
     margin-top: 20px;
   }
@@ -405,7 +405,7 @@ i:hover {
     width: 32%;
     max-width: 400px;
     position: absolute;
-    margin-top: 70vw;
+    margin-top: 72vw;
     margin-left: 400px;
     z-index: 1;
     opacity: 0;
@@ -448,8 +448,11 @@ i:hover {
 
   .phone-full {
     max-width: 200px;
-    top: 70px;
-    margin-left: 20px;
+    top: 140px;
+    margin-left: 15px;
+  }
+  .object-wrapper {
+    width: 95%;
   }
   .model {
     width: 100%;
@@ -487,7 +490,7 @@ i:hover {
   }
   .footer-row {
     display: block;
-    margin-top: 180px;
+    margin-top: 160px;
     left: 0;
   }
   .footer-col {
@@ -496,7 +499,7 @@ i:hover {
   footer ul {
     position: relative;
     margin-top: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   footer li {
     padding-bottom: 8px;
@@ -508,7 +511,7 @@ i:hover {
     /* margin-left: 50px;
     margin-right: 50px; */
     margin-top: 20px;
-    left:50px;
+    left:20px;
   }
   .find-us ul li {
     margin: auto;
@@ -535,7 +538,7 @@ i:hover {
     }
 
     .object-wrapper {
-      width: 350px;
+      width: 95%;
       height: 350px;
     }
   }

@@ -22,6 +22,7 @@ let revealTextX = document.querySelectorAll(".reveal-spread-x");
 function revealSpreadX() {
   for (let i = 0; i < revealTextX.length; i++) {
     let windowHeight = window.innerHeight;
+
     let elementTop = revealTextX[i].getBoundingClientRect().top;
     let elementVisible = -120 + i * 70;
     if (elementTop < windowHeight - elementVisible) {
@@ -82,6 +83,8 @@ window.onload = (event) => {
 // isMediaMatch.addEventListener(checkMedia);
 window.addEventListener("scroll", revealY);
 window.addEventListener("scroll", revealSpreadX);
-// window.addEventListener("scroll", footerScroll);
+window.addEventListener("scroll", footerScroll);
 window.addEventListener("scroll", modelScroll);
 window.addEventListener("scroll", lineScroll);
+x;
+n;
